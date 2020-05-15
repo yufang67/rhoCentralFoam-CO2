@@ -1,0 +1,61 @@
+# 1 "Make/options"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 8 "<command-line>"
+# 1 "/cvmfs/soft.computecanada.ca/nix/var/nix/profiles/16.09/include/stdc-predef.h" 1 3
+
+# 17 "/cvmfs/soft.computecanada.ca/nix/var/nix/profiles/16.09/include/stdc-predef.h" 3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 8 "<command-line>" 2
+# 1 "Make/options"
+EXE_INC = -I$(LIB_SRC)/meshTools/lnInclude -I$(WM_PROJECT_USER_DIR)/../src/TurbulenceModels/turbulenceModels/lnInclude -I$(WM_PROJECT_USER_DIR)/../src/TurbulenceModels/compressible/lnInclude -I$(WM_PROJECT_USER_DIR)/../src/transportModels/compressible/lnInclude -I$(WM_PROJECT_USER_DIR)/../src/thermophysicalModels/basic/lnInclude -I$(WM_PROJECT_USER_DIR)/../src/thermophysicalModels/specie/lnInclude -I$(LIB_SRC)/finiteVolume/lnInclude
+
+
+
+
+
+
+
+EXE_LIBS = -L$(FOAM_USER_LIBBIN) -lcompressibleTransportModels_co2 -lcompressibleTurbulenceModels_co2 -lturbulenceModels_co2 -lmeshTools -lfiniteVolume

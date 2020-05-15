@@ -1,0 +1,44 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  4.x                                   |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      thermophysicalProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+thermoType
+{
+    type            CO2heRhoThermo;
+    mixture         pureMixture;
+    transport       CO2_kinetic;
+    thermo          CO2SW;
+    equationOfState SpanWagner;
+    specie          specie;
+    energy          CO2InternalEnergy;
+}
+
+mixture
+{
+    specie
+   {
+        nMoles          1;
+        molWeight       28.96;
+    }
+    transport
+    {
+        mu              0.000001;
+        Pr              1;
+    }
+}
+
+
+// ************************************************************************* //

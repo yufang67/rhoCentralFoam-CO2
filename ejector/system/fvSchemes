@@ -1,0 +1,74 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  4.x                                   |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      fvSchemes;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+fluxScheme          Kurganov;//Tadmor; //Kurganov;
+
+ddtSchemes
+{
+    default         Euler;
+}
+
+gradSchemes
+{
+    default         Gauss linear; //leastSquares; //Gauss linear;
+}
+
+divSchemes
+{
+    default        Gauss linear;
+    div(tauMC)     Gauss linear;
+}
+
+laplacianSchemes
+{
+    default         Gauss linear corrected;
+}
+
+interpolationSchemes
+{
+    default          linear;
+    reconstruct(rho) upwind; //vanLeer;
+    reconstruct(U)   upwind; //vanLeerV;
+    reconstruct(e)   upwind; //vanLeer;
+    reconstruct(p)   upwind; //vanLeer;
+}
+
+snGradSchemes
+{
+    default         corrected;
+}
+
+//relaxationFactors 
+//  { 
+//      fields 
+//    {
+//       rho 0.7;
+//        ".*"    0.1;
+//        rhoU 0.7;
+//        rhoE 0.7;
+//        k 0.01;
+//        omega 0.7;
+//        epsilon 0.01;
+//    }
+//      equations 
+//      { 
+//          ".*"               0.1;
+//        "(rho|rhoU|rhoE)" 0.7; 
+//        "(k|epsiolon)" 0.01;
+//      } 
+//  }
+// ************************************************************************* //

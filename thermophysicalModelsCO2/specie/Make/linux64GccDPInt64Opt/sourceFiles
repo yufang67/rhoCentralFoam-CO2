@@ -1,0 +1,5 @@
+SOURCE = \
+atomicWeights/atomicWeights.C \
+specie/specie.C \
+reaction/Reactions/makeReactions.C \
+reaction/Reactions/makeLangmuirHinshelwoodReactions.C 

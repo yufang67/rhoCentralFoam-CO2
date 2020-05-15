@@ -1,0 +1,25 @@
+EXE_INC = \
+    -IBCs/lnInclude \
+    -I$(WM_PROJECT_USER_DIR)/../src/thermophysicalModelsCO2/basic/lnInclude \
+    -I$(WM_PROJECT_USER_DIR)/../src/thermophysicalModelsCO2/specie/lnInclude \
+    -I$(LIB_SRC)/finiteVolume/lnInclude \
+    -I$(LIB_SRC)/transportModels/compressible/lnInclude \
+    -I$(WM_PROJECT_USER_DIR)/../src/TurbulenceModelsCO2/turbulenceModels/lnInclude \
+    -I$(WM_PROJECT_USER_DIR)/../src/TurbulenceModelsCO2/compressible/lnInclude \
+    -I$(LIB_SRC)/dynamicMesh/lnInclude \
+    -I$(LIB_SRC)/meshTools/lnInclude
+
+EXE_LIBS = \
+    -L$(FOAM_USER_LIBBIN) \
+    -lfiniteVolume \
+    -lfvOptions \
+    -lmeshTools \
+    -lspecie_co2 \
+    -lfluidThermophysicalModels_co2 \
+    -lcompressibleTransportModels \
+    -lturbulenceModels_co2 \
+    -lcompressibleTurbulenceModels_co2 \
+    -L$(WM_PROJECT_USER_DIR)/../src/CO2FoamSchemeV1/CO2 \
+    -lgfortran \
+    -lopenblas \
+    -lco2lib 

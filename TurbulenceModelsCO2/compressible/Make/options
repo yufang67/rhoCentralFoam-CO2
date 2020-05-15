@@ -1,0 +1,18 @@
+EXE_INC = \
+    -I../turbulenceModels/lnInclude \
+    -I$(WM_PROJECT_USER_DIR)/../src/thermophysicalModelsCO2/basic/lnInclude \
+    -I$(WM_PROJECT_USER_DIR)/../src/thermophysicalModelsCO2/specie/lnInclude \
+    -I$(LIB_SRC)/thermophysicalModels/solidThermo/lnInclude \
+    -I$(LIB_SRC)/thermophysicalModels/solidSpecie/lnInclude \
+    -I$(LIB_SRC)/transportModels/compressible/lnInclude \
+    -I$(LIB_SRC)/finiteVolume/lnInclude \
+    -I$(LIB_SRC)/meshTools/lnInclude \
+
+LIB_LIBS = \
+    -L$(FOAM_USER_LIBBIN) \
+    -lcompressibleTransportModels \
+    -lsolidThermo \
+    -lsolidSpecie \
+    -lturbulenceModels_co2 \
+    -lfiniteVolume \
+    -lmeshTools

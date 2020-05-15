@@ -1,0 +1,34 @@
+EXE_INC = \
+    -IBCs/lnInclude \
+    -I$(WM_PROJECT_USER_DIR)/../src/thermophysicalModels/basic/lnInclude \
+    -I$(WM_PROJECT_USER_DIR)/../src/thermophysicalModels/specie/lnInclude \
+    -I$(LIB_SRC)/finiteVolume/lnInclude \
+    -I$(LIB_SRC)/transportModels/compressible/lnInclude \
+    -I$(WM_PROJECT_USER_DIR)/../src/TurbulenceModels/turbulenceModels/lnInclude \
+    -I$(WM_PROJECT_USER_DIR)/../src/TurbulenceModels/compressible/lnInclude \
+    -I$(LIB_SRC)/dynamicMesh/lnInclude \
+    -I$(LIB_SRC)/meshTools/lnInclude \
+    -I$(MKLROOT)/include \
+    -I$(OPENBLAS_ROOT)/include 
+
+EXE_LIBS = \
+    -L$(FOAM_USER_LIBBIN) \
+    -lfiniteVolume \
+    -lfvOptions \
+    -lcompressibleTransportModels \
+    -lturbulenceModels \
+    -lcompressibleTurbulenceModels \
+    -lmeshTools \
+    -lgfortran \
+    -lifcore \
+    -L$(WM_PROJECT_USER_DIR)/../src/rhoCentralFoam_CO2/CO2 \
+    -L$(MKLROOT)/lib/intel64 \
+    -lmkl_rt \
+    -L$(OPENBLAS_ROOT)/lib \
+    -lopenblas \
+    -lmkl_intel_ilp64 \
+    -lmkl_intel_thread \
+    -lmkl_core \
+    -liomp5 \
+    -lpthread \
+    -lco2lib 

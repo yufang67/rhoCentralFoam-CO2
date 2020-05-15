@@ -1,0 +1,8 @@
+basicThermo/basicThermo.C
+fluidThermo/fluidThermo.C
+
+CO2Thermo/CO2Thermo.C
+CO2Thermo/CO2Thermos.C
+
+
+LIB = $(FOAM_USER_LIBBIN)/libfluidThermophysicalModels

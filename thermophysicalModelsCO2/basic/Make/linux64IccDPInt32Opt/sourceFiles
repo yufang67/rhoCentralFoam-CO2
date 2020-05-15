@@ -1,0 +1,14 @@
+SOURCE = \
+basicThermo/basicThermo.C \
+fluidThermo/fluidThermo.C \
+psiThermo/psiThermo.C \
+psiThermo/psiThermos.C \
+rhoThermo/rhoThermo.C \
+rhoThermo/rhoThermos.C \
+CO2Thermo/CO2Thermo.C \
+CO2Thermo/CO2Thermos.C \
+derivedFvPatchFields/fixedEnergy/fixedEnergyFvPatchScalarField.C \
+derivedFvPatchFields/gradientEnergy/gradientEnergyFvPatchScalarField.C \
+derivedFvPatchFields/mixedEnergy/mixedEnergyFvPatchScalarField.C \
+derivedFvPatchFields/energyJump/energyJump/energyJumpFvPatchScalarField.C \
+derivedFvPatchFields/energyJump/energyJumpAMI/energyJumpAMIFvPatchScalarField.C 

@@ -1,0 +1,23 @@
+EXE_INC = \
+    -IBCs/lnInclude \
+    -I$(WM_PROJECT_USER_DIR)/../src/thermophysicalModels/basic/lnInclude \
+    -I$(WM_PROJECT_USER_DIR)/../src/thermophysicalModels/specie/lnInclude \
+    -I$(LIB_SRC)/finiteVolume/lnInclude \
+    -I$(LIB_SRC)/transportModels/compressible/lnInclude \
+    -I$(WM_PROJECT_USER_DIR)/../src/TurbulenceModels/turbulenceModels/lnInclude \
+    -I$(WM_PROJECT_USER_DIR)/../src/TurbulenceModels/compressible/lnInclude \
+    -I$(LIB_SRC)/dynamicMesh/lnInclude \
+    -I$(LIB_SRC)/meshTools/lnInclude
+
+EXE_LIBS = \
+    -L$(FOAM_USER_LIBBIN) \
+    -lfiniteVolume \
+    -lfvOptions \
+    -lcompressibleTransportModels \
+    -lturbulenceModels \
+    -lcompressibleTurbulenceModels \
+    -lmeshTools \
+    -lgfortran \
+    -L$(WM_PROJECT_USER_DIR)/../src/rhoCentralFoam_CO2/CO2 \
+    -lopenblas \
+    -lco2lib 

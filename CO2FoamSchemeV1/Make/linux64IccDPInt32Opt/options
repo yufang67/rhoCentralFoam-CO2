@@ -1,0 +1,56 @@
+# 1 "Make/options"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 8 "<command-line>"
+# 1 "/cvmfs/soft.computecanada.ca/nix/var/nix/profiles/16.09/include/stdc-predef.h" 1 3
+
+# 17 "/cvmfs/soft.computecanada.ca/nix/var/nix/profiles/16.09/include/stdc-predef.h" 3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 8 "<command-line>" 2
+# 1 "Make/options"
+EXE_INC = -IBCs/lnInclude -I$(WM_PROJECT_USER_DIR)/../src/thermophysicalModelsCO2/basic/lnInclude -I$(WM_PROJECT_USER_DIR)/../src/thermophysicalModelsCO2/specie/lnInclude -I$(LIB_SRC)/finiteVolume/lnInclude -I$(LIB_SRC)/transportModels/compressible/lnInclude -I$(WM_PROJECT_USER_DIR)/../src/TurbulenceModelsCO2/turbulenceModels/lnInclude -I$(WM_PROJECT_USER_DIR)/../src/TurbulenceModelsCO2/compressible/lnInclude -I$(LIB_SRC)/dynamicMesh/lnInclude -I$(LIB_SRC)/meshTools/lnInclude
+# 11 "Make/options"
+
+EXE_LIBS = -L$(FOAM_USER_LIBBIN) -lfiniteVolume -lfvOptions -lmeshTools -lspecie_co2 -lfluidThermophysicalModels_co2 -lcompressibleTransportModels -lturbulenceModels_co2 -lcompressibleTurbulenceModels_co2 -L$(WM_PROJECT_USER_DIR)/../src/CO2FoamSchemeV1/CO2 -lgfortran -lopenblas -lco2lib 
