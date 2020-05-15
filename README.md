@@ -1,1 +1,1 @@
-# rhoCentralFoam-CO2
+# OpenFOAM solver: rhoCentralFoam for CO2
