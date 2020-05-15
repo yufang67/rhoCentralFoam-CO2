@@ -2,7 +2,7 @@
 The rhoCentralFoam solver is coupled with the CO2 look-up table. The coupling is not based on the object-oriented way. It may be improved in the future.
 
 ---
-## File
+## Files
 - ***Main solver***: CO2FoamSchemeV1
 - ***2 cases***: 1dshocktube, ejector
 - ***Other related modules***: thermophysicalModelsCO2, TurbulenceModelCO2. This 2 modules are almost the same as the original ones.
